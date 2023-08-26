@@ -152,9 +152,11 @@ button {
   height: 40rem;
   overflow: hidden;
   position: relative;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
 }
 .work-item img {
-  height: 40rem;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -172,7 +174,10 @@ button {
 .work-item:hover .item-info {
   top: calc(40rem - 20rem);
 }
-
+.work-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
 @media (max-width: 768px) {
   .work-item img {
     width: 100vw;
@@ -183,4 +188,8 @@ button {
   border: none;
   background-color: white;
   padding: 0;
+}
+button:hover {
+  color: var(--text-color-light);
+  text-decoration: underline;
 }

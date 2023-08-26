@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&display=swap');
+
+:root {
+  --text-color: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem; /* Adjust padding */
+}
+
+nav .items {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: calc(100vw - 20%); /* Change to 100% */
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hide by default for larger screens */
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: calc(100vw - 10%); /* Adjust padding */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon for smaller screens */
+  }
+
+  nav .items {
+    display: none; /* Hide navigation links for smaller screens */
+    flex-direction: column; /* Stack navigation links vertically */
+    position: absolute;
+    top: 4rem; /* Adjust position from the top */
+    left: 50%;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  nav .items.active {
+    display: flex;
+    gap: 2rem; /* Show navigation links when active class is added */
+  }
+}

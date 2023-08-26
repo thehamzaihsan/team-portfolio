@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
+  color: var(--text-color);
 }
 
 nav {
@@ -16,7 +17,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 4rem; /* Adjust padding */
+  height: 5rem; /* Adjust padding */
 }
 
 nav .items {
@@ -24,7 +25,9 @@ nav .items {
   gap: 1.25rem;
 }
 
-.container {
+.container,
+section:not(.full),
+footer {
   margin-inline: auto;
   max-width: calc(100vw - 20%); /* Change to 100% */
 }
@@ -65,4 +68,28 @@ a {
     display: flex;
     gap: 2rem; /* Show navigation links when active class is added */
   }
+}
+
+header {
+  height: calc(100vh - 5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0rem;
+}
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 0;
+}
+h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: center;
 }

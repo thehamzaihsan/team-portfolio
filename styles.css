@@ -193,3 +193,183 @@ button:hover {
   color: var(--text-color-light);
   text-decoration: underline;
 }
+/* Service Section */
+.service-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 5rem); 
+  text-align: center;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+}
+
+.service-card {
+  background-color: rgb(170, 170, 170);
+  color: white;
+  width: 500px;
+  height: 500px ; 
+  margin: 10px;
+  padding: 0; 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; 
+  z-index: 0;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  z-index: 1;
+  background-color: rgba(0, 255, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: 50%;
+    height: 180%; 
+    gap: 12.5px;
+    margin:5%;
+  }
+}
+
+@media (max-width:400) {
+  .service-card {
+    width: 50px;
+    height: 10px; 
+  }
+  .service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+  .service-card h3 {
+    font-size: 8px; 
+    font-weight: bold;
+    margin: 0;
+  }
+  .service-card p {
+    font-size: 4px; 
+  }
+}
+
+.service-card h3 {
+  font-size: 180%; 
+  font-weight: bold;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  z-index: 2;
+}
+
+.service-card b {
+  font-size: 18px; 
+  font-weight: bold;
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 2;
+}
+
+.service-card p {
+  font-size: 14px; 
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 2;
+}
+
+/* Our Team Section */
+.team-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.team-member {
+  background-color: #f5f5f5;
+
+  text-align: center;
+}
+
+.team-member img {
+  max-width: 100%;
+  height: auto;
+}
+
+.team-member h3 {
+  display: none; /* if u remove this the text will show up again under our team*/
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.team-member p {
+  display: none;/* if u remove this the text will show up again under our team*/
+  font-size: 14px;
+  color: #777;
+}
+
+/* Contact Section */
+.contact-form {
+  margin-top: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

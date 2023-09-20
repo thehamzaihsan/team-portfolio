@@ -18,7 +18,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 5rem; /* Adjust padding */
+  height: 5rem; 
 }
 
 nav .items {
@@ -30,13 +30,13 @@ nav .items {
 section:not(.full),
 footer {
   margin-inline: auto;
-  max-width: calc(100vw - 20%); /* Change to 100% */
+  max-width: calc(100vw - 20%); 
 }
 
 .menu-icon {
   font-size: 1.5rem;
   cursor: pointer;
-  display: none; /* Hide by default for larger screens */
+  display: none; 
 }
 a {
   color: var(--text-color);
@@ -46,18 +46,18 @@ a {
 
 @media (max-width: 768px) {
   .container {
-    max-width: calc(100vw - 10%); /* Adjust padding */
+    max-width: calc(100vw - 10%); 
   }
 
   .menu-icon {
-    display: block; /* Show the menu icon for smaller screens */
+    display: block; 
   }
 
   nav .items {
-    display: none; /* Hide navigation links for smaller screens */
-    flex-direction: column; /* Stack navigation links vertically */
+    display: none; 
+    flex-direction: column; 
     position: absolute;
-    top: 4rem; /* Adjust position from the top */
+    top: 4rem; 
     left: 50%;
     background-color: white;
     width: 50%;
@@ -68,7 +68,7 @@ a {
 
   nav .items.active {
     display: flex;
-    gap: 2rem; /* Show navigation links when active class is added */
+    gap: 2rem; 
   }
 }
 
@@ -315,14 +315,13 @@ button:hover {
 }
 
 .team-member h3 {
-  display: none; /* if u remove this the text will show up again under our team*/
+  display: none; 
   margin-top: 10px;
   font-size: 18px;
 }
 
 .team-member p {
-  display: none;/* if u remove this the text will show up again under our team*/
-  font-size: 14px;
+  display: none;
   color: #777;
 }
 
@@ -337,3 +336,56 @@ footer{
   font-size: smaller;
 }
 
+/* Mobile Styles for Services Section */
+@media (max-width: 768px) {
+  .service-grid {
+    padding: 20px; 
+  }
+
+  .service-card {
+    width: 100%; 
+    height: auto; 
+    margin: 10px 0; 
+  }
+
+  .service-card h3 {
+    font-size: 24px; 
+  }
+
+  .service-card b {
+    font-size: 20px; 
+  }
+
+  .service-card p {
+    font-size: 16px; 
+  }
+}
+
+/* Mobile and Tablet Styles for Work Section */
+@media (max-width: 768px) {
+  .work-wraper {
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(4, 1fr); 
+  }
+
+  .work-item {
+    height: auto; 
+    margin-bottom: 20px; 
+  }
+
+  .work-item img {
+    width: 100%; 
+  }
+
+  .work-item .item-info {
+    position: relative; 
+    top: auto;
+    height: auto;
+    background-color: transparent; 
+    padding: 0; 
+  }
+
+  .work-item:hover {
+    transform: none; 
+  }
+}

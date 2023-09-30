@@ -30,7 +30,8 @@ nav .items {
 section:not(.full),
 footer {
   margin-inline: auto;
-  max-width: calc(100vw - 20%); 
+  max-width: 100%; 
+
 }
 
 .menu-icon {
@@ -41,7 +42,7 @@ footer {
 a {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 120%;
 }
 
 @media (max-width: 768px) {
@@ -227,6 +228,11 @@ button:hover {
   z-index: 0;
 }
 
+.service-card button {
+  background-color: #77777700;
+  color: #ffffff;
+  }
+
 .service-card::before {
   content: '';
   position: absolute;
@@ -248,6 +254,9 @@ button:hover {
 }
 
 @media (max-width:400) {
+  a{
+    font-size: 20%;
+  }
   .service-card {
     width: 50px;
     height: 10px; 
@@ -280,7 +289,7 @@ button:hover {
   z-index: 2;
 }
 
-.service-card b {
+  .service-card b {
   font-size: 18px; 
   font-weight: bold;
   padding-left: 10%;
@@ -334,7 +343,17 @@ footer{
   text-align: center;
   background-color: #eaeaea;
   padding: 1px;
-  font-size: smaller;
+}
+
+@media (max-width: 600px) {
+  .team-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 2.5%;
+  }
 }
 
 /* Mobile Styles for Services Section */
@@ -364,6 +383,11 @@ footer{
 
 /* Mobile and Tablet Styles for Work Section */
 @media (max-width: 768px) {
+.full{
+  padding: 5%;
+  padding-right: 5%
+}
+
   .work-wraper {
     grid-template-columns: 1fr; 
     grid-template-rows: repeat(4, 1fr); 
@@ -372,10 +396,6 @@ footer{
   .work-item {
     height: auto; 
     margin-bottom: 20px; 
-  }
-
-  .work-item img {
-    width: 100%; 
   }
 
   .work-item .item-info {
